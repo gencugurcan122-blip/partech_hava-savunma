@@ -182,6 +182,31 @@
         line-height: 1.6;
     }
 
+    /* Back Button */
+    .back-button {
+        position: absolute;
+        top: 140px;
+        left: 20px;
+        background: rgba(0, 174, 255, 0.1);
+        border: 2px solid rgba(0, 174, 255, 0.3);
+        color: #00aeff;
+        padding: 12px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .back-button:hover {
+        background: rgba(0, 174, 255, 0.2);
+        border-color: #00aeff;
+        transform: translateX(-5px);
+        box-shadow: 0 5px 15px rgba(0, 174, 255, 0.3);
+    }
+
     /* Content Sections */
     .container {
         max-width: 1200px;
@@ -496,6 +521,13 @@
         .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
         .section { margin: 60px 0; }
         header { padding: 100px 20px 40px; }
+        .back-button {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
     }
 </style>
 </head>
@@ -511,11 +543,12 @@
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">
+            <a href="https://gencugurcan122-blip.github.io/partech_web_index/" class="nav-logo">
                 <span>🛡️</span>
                 <span>IEEE KBU PARTECH</span>
             </a>
             <ul class="nav-links">
+                <li><a href="https://gencugurcan122-blip.github.io/partech_web_index/">Ana Sayfa</a></li>
                 <li><a href="#hakkinda">Hakkında</a></li>
                 <li><a href="#takim">Takım</a></li>
                 <li><a href="#galeri">Galeri</a></li>
@@ -526,6 +559,10 @@
     </nav>
 
     <header>
+        <a href="https://gencugurcan122-blip.github.io/partech_web_index/" class="back-button">
+            <span>←</span>
+            <span>Ana Sayfaya Dön</span>
+        </a>
         <div class="team-hero">
             <span class="team-icon-large">🛡️</span>
             <h1>Hava Savunma Sistemi Takımı</h1>
@@ -730,251 +767,3 @@
         <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em;">
             📧 partech@ieee.kbu.edu.tr | 📞 +90 370 433 20 00
         </p>
-    </footer>
-
-    <script>
-        // Create dynamic stars
-        function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const starCount = 150;
-            
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 4 + 's';
-                star.style.animationDuration = (3 + Math.random() * 2) + 's';
-                
-                const size = Math.random() * 3;
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
-                
-                starsContainer.appendChild(star);
-            }
-        }
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                if (href.startsWith('#')) {
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const offsetTop = target.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        let lastScrollTop = 0;
-        const navbar = document.querySelector('nav');
-        
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-            }
-            
-            if (scrollTop > 100) {
-                navbar.style.background = 'rgba(10, 14, 39, 0.98)';
-                navbar.style.backdropFilter = 'blur(20px)';
-            } else {
-                navbar.style.background = 'rgba(10, 14, 39, 0.95)';
-                navbar.style.backdropFilter = 'blur(15px)';
-            }
-            
-            lastScrollTop = scrollTop;
-        });
-
-        // Initialize stars on load
-        window.addEventListener('load', createStars);
-
-        // Parallax effect on mouse move
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            const hero = document.querySelector('.team-hero');
-            if (hero) {
-                hero.style.transform = `
-                    translateX(${(x - 0.5) * 20}px) 
-                    translateY(${(y - 0.5) * 20}px)
-                `;
-            }
-        });
-
-        // Gallery item interaction
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.05) rotateY(5deg)';
-                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1) rotateY(0deg)';
-            });
-        });
-
-        // Member card hover effects
-        document.querySelectorAll('.member-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const avatar = this.querySelector('.member-avatar');
-                avatar.style.transform = 'scale(1.1) rotateY(360deg)';
-                avatar.style.transition = 'all 0.5s ease';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                const avatar = this.querySelector('.member-avatar');
-                avatar.style.transform = 'scale(1) rotateY(0deg)';
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe sections for scroll animations
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(50px)';
-            section.style.transition = 'all 0.8s ease-out';
-            observer.observe(section);
-        });
-
-        // Mobile menu toggle (basic implementation)
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            const isVisible = navLinks.style.display === 'flex';
-            
-            if (isVisible) {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.background = 'rgba(10, 14, 39, 0.98)';
-                navLinks.style.padding = '20px';
-                navLinks.style.backdropFilter = 'blur(20px)';
-                navLinks.style.borderTop = '1px solid rgba(0, 174, 255, 0.2)';
-            }
-        });
-
-        // Typing effect for hero subtitle
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function typing() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typing, speed);
-                }
-            }
-            
-            typing();
-        }
-
-        // Initialize typing effect after page load
-        window.addEventListener('load', () => {
-            const subtitle = document.querySelector('.hero-subtitle');
-            const originalText = subtitle.textContent;
-            typeWriter(subtitle, originalText, 30);
-        });
-
-        // Add glitch effect to title on hover
-        const title = document.querySelector('h1');
-        title.addEventListener('mouseenter', () => {
-            title.style.animation = 'glitch 0.5s';
-            setTimeout(() => {
-                title.style.animation = '';
-            }, 500);
-        });
-
-        // CSS for glitch effect
-        const glitchStyle = document.createElement('style');
-        glitchStyle.textContent = `
-            @keyframes glitch {
-                0%, 100% { 
-                    transform: translate(0); 
-                    filter: hue-rotate(0deg) brightness(1); 
-                }
-                20% { 
-                    transform: translate(-2px, 2px); 
-                    filter: hue-rotate(90deg) brightness(1.2); 
-                }
-                40% { 
-                    transform: translate(-2px, -2px); 
-                    filter: hue-rotate(180deg) brightness(0.8); 
-                }
-                60% { 
-                    transform: translate(2px, 2px); 
-                    filter: hue-rotate(270deg) brightness(1.1); 
-                }
-                80% { 
-                    transform: translate(2px, -2px); 
-                    filter: hue-rotate(360deg) brightness(0.9); 
-                }
-            }
-        `;
-        document.head.appendChild(glitchStyle);
-
-        // Dynamic tech specs animation
-        function animateSpecs() {
-            const specs = document.querySelectorAll('.spec-value');
-            specs.forEach((spec, index) => {
-                setTimeout(() => {
-                    spec.style.transform = 'scale(1.1)';
-                    spec.style.color = '#00aeff';
-                    spec.style.textShadow = '0 0 10px rgba(0, 174, 255, 0.8)';
-                    
-                    setTimeout(() => {
-                        spec.style.transform = 'scale(1)';
-                        spec.style.color = 'rgba(255, 255, 255, 0.8)';
-                        spec.style.textShadow = 'none';
-                    }, 1000);
-                }, index * 200);
-            });
-        }
-
-        // Trigger spec animation when section is visible
-        const techSpecs = document.querySelector('.tech-specs');
-        const specObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(animateSpecs, 500);
-                    specObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        if (techSpecs) {
-            specObserver.observe(techSpecs);
-        }
-    </script>
-</body>
-</html>
