@@ -1,0 +1,1 @@
+# partech_hava-savunma
