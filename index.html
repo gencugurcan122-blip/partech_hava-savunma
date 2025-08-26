@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IEEE KBU PARTECH - Hava Savunma Sistemi Takımı</title>
+<title>IEEE KBU PARTECH - Hava Savunma Sistemleri</title>
 <style>
     * {
         margin: 0;
@@ -107,6 +107,12 @@
         gap: 10px;
     }
 
+    .nav-logo-icon {
+        width: 30px;
+        height: 30px;
+        filter: drop-shadow(0 0 10px rgba(0, 174, 255, 0.8));
+    }
+
     .nav-links {
         display: flex;
         gap: 30px;
@@ -142,8 +148,9 @@
     }
 
     .team-icon-large {
-        font-size: 8em;
-        margin-bottom: 30px;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 30px;
         display: block;
         filter: drop-shadow(0 0 40px rgba(0, 174, 255, 0.8));
         animation: neonPulse 2s ease-in-out infinite;
@@ -357,16 +364,18 @@
     }
 
     .member-name {
-        font-size: 1.4em;
+        font-size: 1.3em;
         font-weight: 600;
         margin-bottom: 10px;
         color: #00aeff;
+        text-transform: uppercase;
     }
 
     .member-role {
         font-size: 1em;
         color: rgba(255, 255, 255, 0.7);
         margin-bottom: 15px;
+        font-weight: 500;
     }
 
     .member-bio {
@@ -512,7 +521,7 @@
         }
         
         h1 { font-size: 2.5em; }
-        .team-icon-large { font-size: 5em; }
+        .team-icon-large { width: 80px; height: 80px; }
         .about-content { 
             grid-template-columns: 1fr; 
             gap: 30px;
@@ -544,7 +553,7 @@
     <nav>
         <div class="nav-container">
             <a href="https://gencugurcan122-blip.github.io/partech_web_index/" class="nav-logo">
-                <img src="hss_logo.png" alt="Hava Savunma Sistemi" class="team-icon">
+                <img src="hss_logo.png" alt="HSS" class="nav-logo-icon" onerror="this.style.display='none';">
                 <span>IEEE KBU PARTECH</span>
             </a>
             <ul class="nav-links">
@@ -564,11 +573,10 @@
             <span>Ana Sayfaya Dön</span>
         </a>
         <div class="team-hero">
-            <img src="hss_logo.png" alt="Hava Savunma Sistemi" class="team-icon">
+            <img src="hss_logo.png" alt="Hava Savunma Sistemi" class="team-icon-large" onerror="this.style.display='none';">
             <h1>Hava Savunma Sistemi Takımı</h1>
             <p class="hero-subtitle">
-                Gelişmiş radar teknolojileri ve füze savunma sistemleri ile hava sahası güvenliğinde 
-                yenilikçi çözümler geliştiren profesyonel takımımız
+                Görüntü işleme, yapay zekâ ve otonom takip sistemleriyle hava savunmasında güvenliği artıran yenilikçi çözümler geliştiriyoruz.
             </p>
         </div>
     </header>
@@ -581,12 +589,12 @@
                 <div class="about-text">
                     <p>
                         Hava Savunma Sistemi takımımız, modern hava tehditlerine karşı gelişmiş savunma 
-                        çözümleri geliştirmek amacıyla kurulmuştur. Takımımız, radar teknolojileri, 
-                        füze güdüm sistemleri ve elektronik harp alanlarında uzmanlaşmıştır.
+                        çözümleri geliştirmek amacıyla kurulmuştur. Takımımız, görüntü işleme teknolojileri, 
+                        yapay zeka algoritmaları ve otonom takip sistemleri alanlarında uzmanlaşmıştır.
                     </p>
                     <p>
-                        Projelerimizde yapay zeka destekli tehdit tespiti, çok spektrumlu radar 
-                        sistemleri ve adaptif savunma algoritmaları üzerinde çalışmaktayız. 
+                        Projelerimizde yapay zeka destekli tehdit tespiti, görüntü işleme tabanlı hedef 
+                        tanıma ve adaptif takip algoritmaları üzerinde çalışmaktayız. 
                         Amacımız, gelecek nesil hava savunma sistemlerinin temellerini atmaktır.
                     </p>
                     <p>
@@ -598,24 +606,24 @@
                 <div class="tech-specs">
                     <h3 style="color: #00aeff; margin-bottom: 25px; text-align: center;">Teknik Özellikler</h3>
                     <div class="spec-item">
-                        <span class="spec-label">Radar Menzili</span>
-                        <span class="spec-value">500+ km</span>
+                        <span class="spec-label">X Ekseni Hareket</span>
+                        <span class="spec-value">360° döner</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Tespit Kapasitesi</span>
-                        <span class="spec-value">200+ hedef</span>
+                        <span class="spec-label">Hareket Kabiliyeti</span>
+                        <span class="spec-value">Tam yörünge</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Tepki Süresi</span>
-                        <span class="spec-value">< 2 saniye</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Çalışma Frekansı</span>
-                        <span class="spec-value">X/S Band</span>
+                        <span class="spec-label">Yapay Zeka Görüntü İşleme</span>
+                        <span class="spec-value">Aktif</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">İsabet Oranı</span>
                         <span class="spec-value">95%+</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">İmha Süresi</span>
+                        <span class="spec-value">3 hedef < 15 saniye</span>
                     </div>
                 </div>
             </div>
@@ -626,62 +634,110 @@
             <h2 class="section-title">Takım Üyeleri</h2>
             <div class="team-grid">
                 <div class="member-card">
-                    <div class="member-avatar">👨‍💻</div>
-                    <div class="member-name">Dr. Mehmet YILMAZ</div>
-                    <div class="member-role">Proje Lideri & Radar Uzmanı</div>
+                    <div class="member-avatar">🏆</div>
+                    <div class="member-name">Uğurcan Genç</div>
+                    <div class="member-role">Kaptan</div>
                     <div class="member-bio">
-                        10+ yıl savunma sanayi deneyimi. Radar sistemleri ve sinyal işleme alanında uzman. 
-                        ASELSAN ve HAVELSAN projelerinde yer almış.
+                        Takım liderliği ve proje koordinasyonu. Ekip çalışması ve strateji geliştirme konularında deneyimli.
                     </div>
                 </div>
 
                 <div class="member-card">
-                    <div class="member-avatar">👩‍🔬</div>
-                    <div class="member-name">Ayşe KAYA</div>
-                    <div class="member-role">Elektronik Harp Uzmanı</div>
+                    <div class="member-avatar">👁️</div>
+                    <div class="member-name">Elif Furuncu</div>
+                    <div class="member-role">Görüntü İşleme Uzmanı</div>
                     <div class="member-bio">
-                        Elektronik harp sistemleri ve frekans yönetimi konularında uzman. 
-                        RF tasarım ve EMC/EMI testleri deneyimi.
+                        Bilgisayar görü algoritmaları ve görüntü işleme teknikleri alanında uzman. AI tabanlı nesne tanıma sistemleri geliştirici.
                     </div>
                 </div>
 
                 <div class="member-card">
-                    <div class="member-avatar">👨‍🚀</div>
-                    <div class="member-name">Ali DEMIR</div>
-                    <div class="member-role">Füze Güdüm Sistemi Uzmanı</div>
+                    <div class="member-avatar">⚡</div>
+                    <div class="member-name">Bilkan Çelebi</div>
+                    <div class="member-role">Donanım Tasarım Ekip Lideri</div>
                     <div class="member-bio">
-                        Füze güdüm algoritmaları ve kontrol sistemleri alanında çalışıyor. 
-                        Roket ve füze teknolojileri konusunda deneyimli.
+                        Elektronik devre tasarımı ve PCB geliştirme konularında liderlik yapıyor. Güç yönetimi ve sensör entegrasyonu uzmanı.
                     </div>
                 </div>
 
                 <div class="member-card">
-                    <div class="member-avatar">👩‍💻</div>
-                    <div class="member-name">Zeynep ÖZKAN</div>
-                    <div class="member-role">Yazılım Geliştirici</div>
+                    <div class="member-avatar">🔧</div>
+                    <div class="member-name">Necip Köse</div>
+                    <div class="member-role">Donanım Tasarım Ekip Üyesi</div>
                     <div class="member-bio">
-                        C++, Python ve MATLAB ile savunma sistemleri yazılımı geliştiriyor. 
-                        Gerçek zamanlı sistemler ve AI algoritmaları uzmanı.
+                        Elektronik sistem tasarımı ve entegrasyon süreçlerinde aktif rol alıyor. Analog ve dijital devre geliştirme deneyimi.
                     </div>
                 </div>
 
                 <div class="member-card">
-                    <div class="member-avatar">👨‍🔧</div>
-                    <div class="member-name">Emre AKSOY</div>
-                    <div class="member-role">Donanım Tasarım Uzmanı</div>
+                    <div class="member-avatar">🔌</div>
+                    <div class="member-name">Taha Bora Özcan</div>
+                    <div class="member-role">Donanım Tasarım Ekip Üyesi</div>
                     <div class="member-bio">
-                        RF devre tasarımı ve PCB geliştirim alanında uzman. 
-                        Yüksek frekanslı sistemler ve güç elektroniği deneyimi.
+                        Donanım optimizasyonu ve test süreçlerinde çalışıyor. Sistem entegrasyonu ve kalite kontrol konularında deneyimli.
                     </div>
                 </div>
 
                 <div class="member-card">
-                    <div class="member-avatar">👩‍🎓</div>
-                    <div class="member-name">Fatma ŞAHIN</div>
-                    <div class="member-role">Test & Doğrulama Uzmanı</div>
+                    <div class="member-avatar">💡</div>
+                    <div class="member-name">Belinay İnan</div>
+                    <div class="member-role">Donanım Tasarım Ekip Üyesi</div>
                     <div class="member-bio">
-                        Sistem testleri ve doğrulama süreçleri konusunda deneyimli. 
-                        Kalite güvence ve test otomasyonu uzmanı.
+                        Elektronik tasarım ve prototipleme alanlarında aktif. Sensör teknolojileri ve veri toplama sistemleri uzmanı.
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-avatar">💻</div>
+                    <div class="member-name">Doğukan Aramaz</div>
+                    <div class="member-role">Gömülü Yazılım Ekip Lideri</div>
+                    <div class="member-bio">
+                        Mikrodenetleyici programlama ve gerçek zamanlı sistem geliştirme konularında liderlik yapıyor. C/C++ ve Python uzmanı.
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-avatar">📱</div>
+                    <div class="member-name">İbrahim Kahya</div>
+                    <div class="member-role">Gömülü Yazılım Ekip Üyesi</div>
+                    <div class="member-bio">
+                        Firmware geliştirme ve sistem programlama alanında çalışıyor. IoT ve haberleşme protokolleri konularında deneyimli.
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-avatar">🖥️</div>
+                    <div class="member-name">Tuğba Öztürk</div>
+                    <div class="member-role">Gömülü Yazılım Ekip Üyesi</div>
+                    <div class="member-bio">
+                        Algoritmik çözümler ve yazılım optimizasyonu konularında aktif. Veri yapıları ve sistem mimarisi geliştirme deneyimi.
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-avatar">⌨️</div>
+                    <div class="member-name">Emre Korkmaz</div>
+                    <div class="member-role">Gömülü Yazılım Ekip Üyesi</div>
+                    <div class="member-bio">
+                        Yazılım test süreçleri ve debugging konularında uzman. Sistem güvenilirliği ve performans optimizasyonu alanında deneyimli.
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-avatar">🔨</div>
+                    <div class="member-name">Samet Çevik</div>
+                    <div class="member-role">Mekanik Ekip Lideri</div>
+                    <div class="member-bio">
+                        3D tasarım ve mekanik sistem geliştirme konularında liderlik yapıyor. CAD yazılımları ve üretim süreçleri uzmanı.
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-avatar">⚙️</div>
+                    <div class="member-name">Abdulhadi Allaf</div>
+                    <div class="member-role">Mekanik Ekip Üyesi</div>
+                    <div class="member-bio">
+                        Makine tasarımı ve üretim teknikleri alanında aktif. Malzeme seçimi ve dayanıklılık testleri konularında deneyimli.
                     </div>
                 </div>
             </div>
@@ -692,10 +748,10 @@
             <h2 class="section-title">Proje Galerisi</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <span>📡</span>
+                    <span>🎯</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Radar Anteni Tasarımı</div>
-                        <div class="gallery-description">Çok bantlı faz dizini radar anteni prototipi</div>
+                        <div class="gallery-title">Hedef Tespit Sistemi</div>
+                        <div class="gallery-description">AI destekli hedef tanıma ve sınıflandırma sistemi</div>
                     </div>
                 </div>
 
@@ -708,50 +764,50 @@
                 </div>
 
                 <div class="gallery-item">
-                    <span>🎯</span>
+                    <span>📡</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Hedef Tespit Sistemi</div>
-                        <div class="gallery-description">AI destekli hedef tanıma ve sınıflandırma</div>
+                        <div class="gallery-title">Takip Sistemi</div>
+                        <div class="gallery-description">Otonom takip ve görüntü işleme modülü</div>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <span>🚀</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Füze Simülatörü</div>
-                        <div class="gallery-description">Güdüm sistemi test simülatörü</div>
+                        <div class="gallery-title">Atış Sistemi</div>
+                        <div class="gallery-description">Hassas atış kontrol ve güdüm sistemi</div>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <span>⚡</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">RF Test Laboratuvarı</div>
-                        <div class="gallery-description">Yüksek frekanslı sistem test düzeneği</div>
+                        <div class="gallery-title">Elektronik Kontrol</div>
+                        <div class="gallery-description">Güç yönetimi ve elektronik kontrol ünitesi</div>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <span>🛰️</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Uydu Haberleşme</div>
-                        <div class="gallery-description">Savunma ağı iletişim alt yapısı</div>
+                        <div class="gallery-title">İletişim Sistemi</div>
+                        <div class="gallery-description">Kablosuz veri iletişim alt yapısı</div>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <span>🎮</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Operatör Eğitimi</div>
-                        <div class="gallery-description">Sanal gerçeklik destekli eğitim simülatörü</div>
+                        <div class="gallery-title">Operatör Arayüzü</div>
+                        <div class="gallery-description">Kullanıcı dostu kontrol paneli ve monitoring</div>
                     </div>
                 </div>
 
                 <div class="gallery-item">
                     <span>🔧</span>
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Donanım Montajı</div>
-                        <div class="gallery-description">Sistem entegrasyon ve montaj çalışmaları</div>
+                        <div class="gallery-title">Mekanik Tasarım</div>
+                        <div class="gallery-description">360° hareket kabiliyeti mekanik sistem</div>
                     </div>
                 </div>
             </div>
@@ -767,3 +823,251 @@
         <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em;">
             📧 partech@ieee.kbu.edu.tr | 📞 +90 370 433 20 00
         </p>
+    </footer>
+
+    <script>
+        // Create dynamic stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.animationDuration = (3 + Math.random() * 2) + 's';
+                
+                const size = Math.random() * 3;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            
+            if (scrollTop > 100) {
+                navbar.style.background = 'rgba(10, 14, 39, 0.98)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            } else {
+                navbar.style.background = 'rgba(10, 14, 39, 0.95)';
+                navbar.style.backdropFilter = 'blur(15px)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Initialize stars on load
+        window.addEventListener('load', createStars);
+
+        // Parallax effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const hero = document.querySelector('.team-hero');
+            if (hero) {
+                hero.style.transform = `
+                    translateX(${(x - 0.5) * 20}px) 
+                    translateY(${(y - 0.5) * 20}px)
+                `;
+            }
+        });
+
+        // Gallery item interaction
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotateY(5deg)';
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotateY(0deg)';
+            });
+        });
+
+        // Member card hover effects
+        document.querySelectorAll('.member-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const avatar = this.querySelector('.member-avatar');
+                avatar.style.transform = 'scale(1.1) rotateY(360deg)';
+                avatar.style.transition = 'all 0.5s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const avatar = this.querySelector('.member-avatar');
+                avatar.style.transform = 'scale(1) rotateY(0deg)';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for scroll animations
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(50px)';
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const isVisible = navLinks.style.display === 'flex';
+            
+            if (isVisible) {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'rgba(10, 14, 39, 0.98)';
+                navLinks.style.padding = '20px';
+                navLinks.style.backdropFilter = 'blur(20px)';
+                navLinks.style.borderTop = '1px solid rgba(0, 174, 255, 0.2)';
+            }
+        });
+
+        // Typing effect for hero subtitle
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                }
+            }
+            
+            typing();
+        }
+
+        // Initialize typing effect after page load
+        window.addEventListener('load', () => {
+            const subtitle = document.querySelector('.hero-subtitle');
+            const originalText = subtitle.textContent;
+            typeWriter(subtitle, originalText, 30);
+        });
+
+        // Add glitch effect to title on hover
+        const title = document.querySelector('h1');
+        title.addEventListener('mouseenter', () => {
+            title.style.animation = 'glitch 0.5s';
+            setTimeout(() => {
+                title.style.animation = '';
+            }, 500);
+        });
+
+        // CSS for glitch effect
+        const glitchStyle = document.createElement('style');
+        glitchStyle.textContent = `
+            @keyframes glitch {
+                0%, 100% { 
+                    transform: translate(0); 
+                    filter: hue-rotate(0deg) brightness(1); 
+                }
+                20% { 
+                    transform: translate(-2px, 2px); 
+                    filter: hue-rotate(90deg) brightness(1.2); 
+                }
+                40% { 
+                    transform: translate(-2px, -2px); 
+                    filter: hue-rotate(180deg) brightness(0.8); 
+                }
+                60% { 
+                    transform: translate(2px, 2px); 
+                    filter: hue-rotate(270deg) brightness(1.1); 
+                }
+                80% { 
+                    transform: translate(2px, -2px); 
+                    filter: hue-rotate(360deg) brightness(0.9); 
+                }
+            }
+        `;
+        document.head.appendChild(glitchStyle);
+
+        // Dynamic tech specs animation
+        function animateSpecs() {
+            const specs = document.querySelectorAll('.spec-value');
+            specs.forEach((spec, index) => {
+                setTimeout(() => {
+                    spec.style.transform = 'scale(1.1)';
+                    spec.style.color = '#00aeff';
+                    spec.style.textShadow = '0 0 10px rgba(0, 174, 255, 0.8)';
+                    
+                    setTimeout(() => {
+                        spec.style.transform = 'scale(1)';
+                        spec.style.color = 'rgba(255, 255, 255, 0.8)';
+                        spec.style.textShadow = 'none';
+                    }, 1000);
+                }, index * 200);
+            });
+        }
+
+        // Trigger spec animation when section is visible
+        const techSpecs = document.querySelector('.tech-specs');
+        const specObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(animateSpecs, 500);
+                    specObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (techSpecs) {
+            specObserver.observe(techSpecs);
+        }
+    </script>
+</body>
+</html>
